@@ -1,0 +1,28 @@
+<html>
+
+    <head>
+        <title>Belajar Angular 2</title>
+        <!-- Load JavaScript -->
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <!-- Load Aplikasi -->
+        <script>
+            System.config({
+              packages: {
+                aplikasi: {
+                  defaultExtension: 'js'
+                }
+              }
+            });
+            System.import('aplikasi/boot')
+            .then(null, console.error.bind(console));
+        </script>
+    </head>
+
+    <body>
+        <h1>Belajar Angular 2</h1>
+        <halo-angular>Loading ... </halo-angular>
+    </body>
+</html>
